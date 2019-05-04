@@ -5,7 +5,28 @@
 
 <h2>圖書維護</h2>
 
-
-書名:<input type="text">
-圖書類別
+<table>
+<tr>
+書名:<input type="text"></br>
+圖書類別:<select>
+    <option>1</option>
+    <option>2</option>
+</select>
+</tr>
+<tr>
+借閱人:<select>
+    <option>1</option>
+    <option>2</option>
+</select>
+<br>
+</tr>
+<tr>
+借閱狀態:<select>
+    <option>1</option>
+    <option>2</option>
+</select>
+<br>
+    </tr>
+<input type="submit" value="查詢"> <input type="reset" value="清除">  @Html.ActionLink("新增", "Create")
+</table>
 
