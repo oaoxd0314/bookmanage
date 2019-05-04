@@ -12,26 +12,18 @@ namespace bookmanage.Controllers
     {
         BookDataEntities db = new BookDataEntities();
         // GET: Home
-        public ActionResult dbdata()
-        {
-            var bookdata = db.BookData.OrderBy(m => m.BOOK_ID).ToList();
-            return View(bookdata);
-        }
 
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Create(BookData CbookData)
+
+        public ActionResult dbdata()
         {
-            db.BookData.Add(CbookData);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            var bookdata = db.BookData.OrderBy(m => m.BOOK_ID).ToList();
+            return View(bookdata);
         }
-
-
-
 
         public ActionResult Create()
         {
