@@ -107,16 +107,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\BookDataModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BookDataModel.edmx</DependentUpon>
-      <LastGenOutput>BookDataModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\BookDataModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BookDataModel.edmx</DependentUpon>
-      <LastGenOutput>BookDataModel.cs</LastGenOutput>
-    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -139,42 +129,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BookData.cs">
-      <DependentUpon>BookDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BookDataModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BookDataModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BookDataModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BookDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BookDataModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BookDataModel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\BookClass.cs" />
+    <Compile Include="Models\BookCode.cs" />
+    <Compile Include="Models\BookData.cs" />
+    <Compile Include="Models\BookDataService.cs" />
+    <Compile Include="Models\CodeService.cs" />
+    <Compile Include="Models\MemberM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <EntityDeploy Include="Models\BookDataModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BookDataModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BookDataModel.edmx.diagram">
-      <DependentUpon>BookDataModel.edmx</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Home\Create.cshtml" />
-    <Content Include="Views\Home\Edit.cshtml" />
-    <Content Include="Views\Home\dbdata.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

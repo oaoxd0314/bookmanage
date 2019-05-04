@@ -57,18 +57,18 @@ namespace bookmanage.Controllers
         [HttpPost]
         public ActionResult Edit(BookData EbookData)
         {
-            int BOOK_ID = EbookData.BOOK_ID;
+            int BOOK_ID = EbookData.BookId;
             var bookdata = db.BookData.Where(m => m.BOOK_ID == BOOK_ID).FirstOrDefault();
-            bookdata.BOOK_AUTHOR = EbookData.BOOK_AUTHOR;
-            bookdata.BOOK_BOUGHT_DATE = EbookData.BOOK_BOUGHT_DATE;
-            bookdata.BOOK_CLASS_ID = EbookData.BOOK_CLASS_ID;
-            bookdata.BOOK_KEEPER = EbookData.BOOK_KEEPER;
-            bookdata.BOOK_NAME = EbookData.BOOK_NAME;
-            bookdata.BOOK_NOTE = EbookData.BOOK_NOTE;
-            bookdata.BOOK_PUBLISHER = EbookData.BOOK_PUBLISHER;
-            bookdata.BOOK_STATUS = EbookData.BOOK_STATUS;
-            bookdata.CREATE_DATE = EbookData.CREATE_DATE;
-            bookdata.CREATE_USER = EbookData.CREATE_USER;
+            bookdata.BOOK_AUTHOR = EbookData.BookAuthor;
+            bookdata.BOOK_BOUGHT_DATE = EbookData.BookBoughtDate;
+            bookdata.BOOK_CLASS_ID = EbookData.BookClassId;
+            bookdata.BOOK_KEEPER = EbookData.BookKeeper;
+            bookdata.BOOK_NAME = EbookData.BookName;
+            bookdata.BOOK_NOTE = EbookData.BookNote;
+            bookdata.BOOK_PUBLISHER = EbookData.BookPublisher;
+            bookdata.BOOK_STATUS = EbookData.BookStatus;
+            bookdata.CREATE_DATE = EbookData.CreateDate;
+            bookdata.CREATE_USER = EbookData.CreateUser;
             db.SaveChanges();
             return RedirectToAction("Index");
 
