@@ -21,21 +21,23 @@ namespace bookmanage.Models
         /// 取得客戶資料
         /// </summary>
         /// <returns></returns>
-        public List<BookData> GetBookData(string bookdata)
+        public List<BookData> GetBookData()
         {
             IList<BookData> list = new List<BookData>()
-        {
-            new BookData()
             {
-                BookId = 1,
-                BookName = "訂單2"
-            },
-            new BookData()
-            {
-                OrderId = 2,
-                Name = "訂單2"
-            }
+                new BookData()
+                {
+                    BookId = 1,
+                    BookName = "訂單2"
+                },
+                new BookData()
+                {
+                    OrderId = 2,
+                    Name = "訂單2"
+                }
+            };
         }
+
 
         /// <summary>
         /// 取得codeTable的部分資料
