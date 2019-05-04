@@ -12,7 +12,7 @@ namespace bookmanage.Controllers
     {
         BookDataEntities db = new BookDataEntities();
         // GET: Home
-        public ActionResult db()
+        public ActionResult dbdata()
         {
             var bookdata = db.BookData.OrderBy(m => m.BOOK_ID).ToList();
             return View(bookdata);
@@ -22,6 +22,7 @@ namespace bookmanage.Controllers
         {
             return View();
         }
+
         public ActionResult Create(BookData CbookData)
         {
             db.BookData.Add(CbookData);
